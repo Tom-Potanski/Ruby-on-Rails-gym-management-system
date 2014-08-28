@@ -1,4 +1,6 @@
 Gocha::Application.routes.draw do
+  resources :coaches
+
   resources :activities
 
   get "activities/new"

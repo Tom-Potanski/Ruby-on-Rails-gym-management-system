@@ -6,7 +6,7 @@
     <ul class="nav masthead-nav">
       <li id="li1" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "login" %>  ><%= link_to "Zaloguj się", '#', :id => "menu1" %></li>
       <li id="li2" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "about" %> >   <%= link_to "O nas", about_path, :id => "menu2" %></li>
-      <li id="li3" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "coaches" %>  ><%= link_to "Trenerzy", '#', :id => "menu3" %></li>
+      <li id="li3" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "coaches" %>  ><%= link_to "Trenerzy", coaches_path, :id => "menu3" %></li>
       <li id="li4" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "activities" %>  ><%= link_to "Zajęcia", activities_path, :id => "menu4" %></li>
       <li id="li5" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "diets" %>  ><%= link_to "Diety", '#', :id => "menu5" %></li>
       <li id="li6" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "" %> ><%= link_to "Strona główna", root_path, :id => "menu6" %></li>
