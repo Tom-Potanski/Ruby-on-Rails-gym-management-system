@@ -5,6 +5,8 @@ Gocha::Application.routes.draw do
 
   get "activities/new"
   get "activities/index"
+  get "coaches/new"
+  get "coaches/index"
   # get "static_pages/home"
   root "static_pages#home"
 
