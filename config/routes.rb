@@ -5,6 +5,14 @@ Gocha::Application.routes.draw do
   get "activities/index"
   # get "static_pages/home"
   root "static_pages#home"
+
+  # match '/signup',  to: 'users#new',            via: 'get'
+  match '/login',  to: 'static_pages#home',            via: 'get'
+  match '/about',  to: 'static_pages#about',            via: 'get'
+  # match '/coaches',  to: 'static_pages#coaches',            via: 'get'
+  # match '/activities',  to: 'static_pages#home',            via: 'get'
+
+
   # get "static_pages/help"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

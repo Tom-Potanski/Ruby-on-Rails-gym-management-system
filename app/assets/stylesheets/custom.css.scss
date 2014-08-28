@@ -240,6 +240,7 @@ a:hover {
 html,
 body {
   height: 100%;
+//  width: 100%;
 //  background-color: #333;
     background-color: #ffffff;
 }
@@ -483,6 +484,28 @@ body {
   font-size: large;
   text-align: justify;
   text-indent: 30px;
-  /*background-color: black;*/
+//  background-color: black;
+    background-color: white;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  color: black;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.record-table {
+  table-layout: fixed;
+  width: 1000px;
+//  align-content: center;
+  margin: 0 auto;
+}
+
+.record-table td {
+  padding-right: 10px;
+  padding-top: 4px;
+//  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /*------------------------------------------*/
