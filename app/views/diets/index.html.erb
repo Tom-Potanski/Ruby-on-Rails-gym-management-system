@@ -1,0 +1,32 @@
+<% provide(:active_menu, 'diets') %>
+
+
+<h1>Listing diets</h1>
+
+<table class="record-table">
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th></th>
+      <!--<th></th>-->
+      <!--<th></th>-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @diets.each do |diet| %>
+      <tr>
+        <td><%= diet.name %></td>
+        <td><%= diet.description %></td>
+        <td><%= link_to 'Pokaż', diet %></td>
+        <!--<td><%#= link_to 'Edit', edit_diet_path(diet) %></td>-->
+        <!--<td><%#= link_to 'Destroy', diet, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Diet', new_diet_path %>

@@ -1,0 +1,17 @@
+<% provide(:active_menu, 'diets') %>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @diet.name %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @diet.description %>
+</p>
+
+<%#= link_to 'Edit', edit_diet_path(@diet) %> |
+<%= link_to 'Back', diets_path %>
