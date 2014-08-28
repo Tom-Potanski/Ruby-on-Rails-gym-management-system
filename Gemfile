@@ -6,7 +6,6 @@ gem 'rails', '4.0.8'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 # gem 'bcrypt-ruby', '3.1.2'
-gem 'pg', '0.15.1'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
@@ -39,4 +38,5 @@ end
 
 group :production do
   gem 'rails_12factor', '0.0.2'
+  gem 'pg', '0.15.1'
 end
