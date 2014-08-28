@@ -1,4 +1,7 @@
 Gocha::Application.routes.draw do
+  resources :activities
+
+  get "activities/new"
   # get "static_pages/home"
   root "static_pages#home"
   # get "static_pages/help"
