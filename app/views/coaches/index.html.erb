@@ -9,8 +9,8 @@
       <th>Imie i nazwisko</th>
       <th>Opis</th>
       <th></th>
-      <!--<th></th>-->
-      <!--<th></th>-->
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -20,8 +20,8 @@
         <td><%= coach.name %></td>
         <td><%= coach.description %></td>
         <td><%= link_to 'Pokaż', coach %></td>
-        <!--<td><%#= link_to 'Edit', edit_coach_path(coach) %></td>-->
-        <!--<td><%#= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
+        <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
