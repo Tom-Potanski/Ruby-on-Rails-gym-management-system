@@ -1,9 +1,10 @@
 Gocha::Application.routes.draw do
+  get "users/new"
+
   resources :diets
-
   resources :coaches
-
   resources :activities
+  resources :users
 
   get "activities/new"
   get "activities/index"
@@ -14,7 +15,7 @@ Gocha::Application.routes.draw do
   # get "static_pages/home"
   root "static_pages#home"
 
-  # match '/signup',  to: 'users#new',            via: 'get'
+  match '/signup',  to: 'users#new',            via: 'get'
   match '/login',  to: 'static_pages#home',            via: 'get'
   match '/about',  to: 'static_pages#about',            via: 'get'
   # match '/coaches',  to: 'static_pages#coaches',            via: 'get'
