@@ -9,8 +9,8 @@
       <th>Nazwa</th>
       <th>Opis</th>
       <th></th>
-      <th></th>
-      <th></th>
+      <!--<th></th>-->
+      <!--<th></th>-->
     </tr>
   </thead>
 
@@ -20,8 +20,8 @@
         <td><%= activity.name %></td>
         <td><%= activity.description %></td>
         <td><%= link_to 'Pokaż', activity %></td>
-        <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-        <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--<td><%#= link_to 'Edit', edit_activity_path(activity) %></td>-->
+        <!--<td><%#= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>

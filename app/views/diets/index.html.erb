@@ -9,8 +9,8 @@
       <th>Nazwa</th>
       <th>Opis</th>
       <th></th>
-      <!--<th></th>-->
-      <!--<th></th>-->
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -20,8 +20,8 @@
         <td><%= diet.name %></td>
         <td><%= diet.description %></td>
         <td><%= link_to 'Pokaż', diet %></td>
-        <!--<td><%#= link_to 'Edit', edit_diet_path(diet) %></td>-->
-        <!--<td><%#= link_to 'Destroy', diet, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        <td><%= link_to 'Edit', edit_diet_path(diet) %></td>
+        <td><%= link_to 'Destroy', diet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
