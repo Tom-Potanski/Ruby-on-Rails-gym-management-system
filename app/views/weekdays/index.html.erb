@@ -1,0 +1,27 @@
+<h1>Listing weekdays</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weekdays.each do |weekday| %>
+      <tr>
+        <td><%= weekday.name %></td>
+        <td><%= link_to 'Show', weekday %></td>
+        <td><%= link_to 'Edit', edit_weekday_path(weekday) %></td>
+        <td><%= link_to 'Destroy', weekday, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weekday', new_weekday_path %>

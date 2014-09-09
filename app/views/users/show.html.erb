@@ -1,0 +1,41 @@
+<% provide(:title, @user.name) %>
+<% provide(:active_menu, 'profile') %>
+
+
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
+  <% if (@ars.blank?) %>
+      Nie masz przypisanych zajęć
+  <% end %>
+
+  <% if (!@ars.blank?) %>
+      Twój plan zajęć:
+  <% end %>
+
+<ul>
+<% @ars.each do |ar| %>
+      <!--<li><%#= ar.start_time.to_s %></li>-->
+    <li><%= ar.weekday.name.to_s + ", " + ar.start_time.to_s + " - " + (ar.start_time + 1).to_s + ": " + ar.activity.name + ", pod czujnym okiem: " + ar.coach.name %></li>
+<% end %>
+</ul>
+
+    <% if is_coach(@user) %>
+
+    Gratulacje, jesteś trenerem<ul>
+    <li><%= link_to "Listuj użytkowników", showusers_path %></li>
+    <li><%= link_to "Dodaj zajęcia użytkownikowi", add_activity_to_plan_path %></li>
+    </ul>
+
+    <% else %>
+        Jesteś zwykłym kursantem, nie trenerem.
+    <% end %>

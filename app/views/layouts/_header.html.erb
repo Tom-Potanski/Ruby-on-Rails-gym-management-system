@@ -4,7 +4,19 @@
   <div class="inner">
     <h3 class="masthead-brand">Twoja siłownia, online <%#= yield(current_active_menu(:active_menu)) %> </h3>
     <ul class="nav masthead-nav">
-      <li id="li1" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "login" %>  ><%= link_to "Zaloguj się", '#', :id => "menu1" %></li>
+
+      <% if signed_in? %>
+          <li id="li11" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "profile" %>  ><%= link_to "Moje konto", current_user, :id => "menu11" %></li>
+          <li id="li11" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "settings" %>  ><%= link_to "Ustawienia", edit_user_path(current_user), :id => "menu12" %></li>
+          <li id="li11" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "singout" %>  ><%= link_to "Wyloguj", signout_path, :id => "menu13" %></li>
+
+      <% else %>
+        <li id="li0" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "signin" %>  ><%= link_to "Zaloguj", signin_path, :id => "menu0" %></li>
+        <li id="li1" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "signup" %>  ><%= link_to "Zarejestruj się", signup_path, :id => "menu1" %></li>
+      <% end %>
+
+
+
       <li id="li2" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "about" %> >   <%= link_to "O nas", about_path, :id => "menu2" %></li>
       <li id="li3" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "coaches" %>  ><%= link_to "Trenerzy", coaches_path, :id => "menu3" %></li>
       <li id="li4" <%=  "class=\"active\""  .html_safe if yield(current_active_menu(:active_menu)).to_s.eql? "activities" %>  ><%= link_to "Zajęcia", activities_path, :id => "menu4" %></li>

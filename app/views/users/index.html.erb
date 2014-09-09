@@ -1,0 +1,35 @@
+
+<% provide(:active_menu, 'profile') %>
+
+
+<h1>Kursanci:</h1>
+
+<table class="record-table">
+  <thead>
+  <tr>
+    <th>Imie i nazwisko</th>
+    <th>Email</th>
+    <th></th>
+    <!--<th></th>-->
+    <!--<th></th>-->
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <% if !is_coach(user) %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Pokaż', user %></td>
+        <!--<td><%#= link_to 'Edit', edit_coach_path(coach) %></td>-->
+        <!--<td><%#= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!--<%= link_to 'New Coach', new_coach_path %>-->

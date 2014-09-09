@@ -1,0 +1,2 @@
+module WeekdaysHelper
+end
