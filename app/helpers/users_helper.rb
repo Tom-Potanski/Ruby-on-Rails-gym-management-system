@@ -7,4 +7,9 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
   end
 
+  def is_coach(user)
+    c = Coach.where(:email => user.email).count
+    return (c == 1)
+  end
+
 end

@@ -1,10 +1,17 @@
 Gocha::Application.routes.draw do
+  resources :activity_record3s
+
+  resources :weekdays
+
+  resources :models
+
   get "users/new"
 
   resources :diets
   resources :coaches
   resources :activities
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   get "activities/new"
   get "activities/index"
@@ -14,9 +21,15 @@ Gocha::Application.routes.draw do
   get "diets/index"
   # get "static_pages/home"
   root "static_pages#home"
+  post "activity_record3s/new"
 
+  match '/showusers', to: 'users#index',          via: 'get'
+  match '/add_activity_to_plan', to: 'activity_record3s#new',          via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
-  match '/login',  to: 'static_pages#home',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/signout', to: 'sessions#destroy',     via: 'get'
+  # match '/login',  to: 'static_pages#home',            via: 'get'
   match '/about',  to: 'static_pages#about',            via: 'get'
   # match '/coaches',  to: 'static_pages#coaches',            via: 'get'
   # match '/activities',  to: 'static_pages#home',            via: 'get'
