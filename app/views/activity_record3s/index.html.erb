@@ -3,11 +3,11 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
-      <th>Coach</th>
-      <th>Weekday</th>
-      <th>Start time</th>
-      <th>Activity</th>
+      <th>Kursant</th>
+      <th>Trener</th>
+      <th>Dzień tygodnia</th>
+      <th>Godzina rozpoczęcia</th>
+      <th>Zajęcia</th>
       <th></th>
       <th></th>
       <th></th>
@@ -22,9 +22,9 @@
         <td><%= activity_record3.weekday.name %></td>
         <td><%= activity_record3.start_time %></td>
         <td><%= activity_record3.activity.name %></td>
-        <td><%= link_to 'Show', activity_record3 %></td>
-        <td><%= link_to 'Edit', edit_activity_record3_path(activity_record3) %></td>
-        <td><%= link_to 'Destroy', activity_record3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaż', activity_record3 %></td>
+        <td><%= link_to 'Edytuj', edit_activity_record3_path(activity_record3) %></td>
+        <td><%= link_to 'Usuń', activity_record3, method: :delete, data: { confirm: 'Jesteś pewien?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Activity record3', new_activity_record3_path %>
+<%= link_to 'Nowy wpis do planu zajęć kursanta', new_activity_record3_path %>
