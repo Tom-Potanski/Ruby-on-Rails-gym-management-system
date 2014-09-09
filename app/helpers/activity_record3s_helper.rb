@@ -1,0 +1,2 @@
+module ActivityRecord3sHelper
+end

@@ -1,0 +1,29 @@
+<%= form_for(@activity_record) do |f| %>
+  <% if @activity_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@activity_record.errors.count, "error") %> prohibited this activity_record from being saved:</h2>
+
+      <ul>
+      <% @activity_record.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :activity_id %><br>
+    <%= f.number_field :activity_id %>
+  </div>
+  <div class="field">
+    <%= f.label :coach_id_integer %><br>
+    <%= f.text_field :coach_id_integer %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

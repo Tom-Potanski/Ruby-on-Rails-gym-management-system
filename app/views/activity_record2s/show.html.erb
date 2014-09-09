@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @activity_record2.user %>
+</p>
+
+<p>
+  <strong>Coach:</strong>
+  <%= @activity_record2.coach %>
+</p>
+
+<p>
+  <strong>Weekday:</strong>
+  <%= @activity_record2.weekday %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @activity_record2.start_time %>
+</p>
+
+<%= link_to 'Edit', edit_activity_record2_path(@activity_record2) %> |
+<%= link_to 'Back', activity_record2s_path %>

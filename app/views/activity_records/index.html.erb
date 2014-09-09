@@ -1,0 +1,31 @@
+<h1>Listing activity_records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>Coach id integer</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activity_records.each do |activity_record| %>
+      <tr>
+        <td><%= activity_record.activity_id %></td>
+        <td><%= activity_record.coach_id_integer %></td>
+        <td><%= activity_record.user_id %></td>
+        <td><%= link_to 'Show', activity_record %></td>
+        <td><%= link_to 'Edit', edit_activity_record_path(activity_record) %></td>
+        <td><%= link_to 'Destroy', activity_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity record', new_activity_record_path %>

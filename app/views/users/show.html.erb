@@ -24,7 +24,8 @@
 
 <ul>
 <% @ars.each do |ar| %>
-    <li><%= ar.weekday.name + ", " + ar.start_time.to_s + " - " + (ar.start_time + 1).to_s + ": " + ar.activity.name + ", pod czujnym okiem: " + ar.coach.name %></li>
+      <!--<li><%#= ar.start_time.to_s %></li>-->
+    <li><%= ar.weekday.name.to_s + ", " + ar.start_time.to_s + " - " + (ar.start_time + 1).to_s + ": " + ar.activity.name + ", pod czujnym okiem: " + ar.coach.name %></li>
 <% end %>
 </ul>
 

@@ -1,0 +1,35 @@
+<h1>Listing activity_record3s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Coach</th>
+      <th>Weekday</th>
+      <th>Start time</th>
+      <th>Activity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @activity_record3s.each do |activity_record3| %>
+      <tr>
+        <td><%= activity_record3.user.name %></td>
+        <td><%= activity_record3.coach.name %></td>
+        <td><%= activity_record3.weekday.name %></td>
+        <td><%= activity_record3.start_time %></td>
+        <td><%= activity_record3.activity.name %></td>
+        <td><%= link_to 'Show', activity_record3 %></td>
+        <td><%= link_to 'Edit', edit_activity_record3_path(activity_record3) %></td>
+        <td><%= link_to 'Destroy', activity_record3, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Activity record3', new_activity_record3_path %>

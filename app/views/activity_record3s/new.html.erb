@@ -1,0 +1,40 @@
+<h1>Dodaj trening kursantowi: </h1>
+
+
+
+<div class="row">
+  <div class="span6 offset3">
+
+
+    <%#= render 'form' %>
+
+    <%= form_for @activity_record3  do |f| %>
+
+        <%= f.label :user_id, "Kursant: " %>
+        <%= f.collection_select :user_id, @users,:id,:name %>
+
+
+        <%= f.label :coach_id, "Trener: " %>
+        <%= f.collection_select :coach_id, @coaches,:id,:name %>
+
+        <%= f.label :weekday_id, "Dzień tygodnia: " %>
+        <%= f.collection_select :weekday_id, @weekdays,:id,:name %>
+
+
+        <%= f.label :start_time , 'Godzina rozpoczęcia: '%>
+        <%#= f.number_field :start_hour %>
+
+        <%= f.number_field :start_time  %>
+
+
+        <%= f.label :activity_id, "Zajęcia: " %>
+        <%= f.collection_select :activity_id, @activities,:id,:name %>
+
+
+        <%= f.submit "Utwórz", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= link_to 'Wstecz', activity_record3s_path %>

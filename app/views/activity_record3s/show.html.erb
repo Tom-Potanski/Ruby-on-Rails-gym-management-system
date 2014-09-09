@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Kursant:</strong>
+  <%= @activity_record3.user.name %>
+</p>
+
+<p>
+  <strong>Trener:</strong>
+  <%= @activity_record3.coach.name %>
+</p>
+
+<p>
+  <strong>Dzień tygodnia:</strong>
+  <%= @activity_record3.weekday.name %>
+</p>
+
+<p>
+  <strong>Godzina rozpoczęcia:</strong>
+  <%= @activity_record3.start_time %>
+</p>
+
+<p>
+  <strong>Zajęcia:</strong>
+  <%= @activity_record3.activity.name %>
+</p>
+
+<%= link_to 'Edit', edit_activity_record3_path(@activity_record3) %> |
+<%= link_to 'Back', activity_record3s_path %>
