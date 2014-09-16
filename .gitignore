@@ -1,3 +1,5 @@
+#A: MS
+
 # Ignore bundler config.
 /.bundle
 
@@ -11,11 +13,15 @@
 
 # Ignore other unneeded files.
 database.yml
+#S ign. dokumentacji
 doc/
+#S ignorowanie plików tymczasowych
 *.swp
+#S ign. pl. tymcz. vima
 *~
 .project
 .DS_Store
+#S ignorowanie folderu konfiguracyjnego środowiska RubyMine
 .idea
 .secret
 

@@ -15,8 +15,10 @@
   </thead>
 
   <tbody>
+  <!--przechodzimy po wszystkich aktywnościach w pętli-->
     <% @activities.each do |activity| %>
       <tr>
+        <!--wypisujemy kolejno dane opisujące daną aktywność, nazwa, opis-->
         <td><%= activity.name %></td>
         <td><%= activity.description %></td>
         <td><%= link_to 'Pokaż', activity %></td>

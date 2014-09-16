@@ -1,4 +1,4 @@
-
+#A: MS
 
 class UsersController < ApplicationController
   def new
@@ -7,6 +7,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    #S pobieramy wpisy do planu zajęć kursanta, które spełniają dane kryteria (są powiązane z tym kursantem)
+    # a następnie sortujemy je po dniach tygodnia i po godzinie rozpoczęcia
     @ars = ActivityRecord3.where(:user_id => @user.id).order('weekday_id ASC').order('start_time ASC')
   end
 
@@ -18,6 +20,7 @@ class UsersController < ApplicationController
     # @user = User.new(params[:user])    # Not the final implementation!
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
+      #S kożystamy z funkcji sign_in z helper'ów w celu zalogowoania użytkownika w danej sesji
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user

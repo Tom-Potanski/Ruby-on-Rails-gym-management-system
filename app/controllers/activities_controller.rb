@@ -1,9 +1,12 @@
+# A: MS
+
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
 
   # GET /activities
   # GET /activities.json
   def index
+    #S pobranie wszystkich aktywnosci z bazy
     @activities = Activity.all
   end
 
@@ -24,9 +27,11 @@ class ActivitiesController < ApplicationController
   # POST /activities
   # POST /activities.json
   def create
+    #S utworzenie nowego rekordu (bez zapisaywania w bazie)
     @activity = Activity.new(activity_params)
 
     respond_to do |format|
+      #S zapisanie w bazie ze sprawdzeniem, czy duało się zapisać i przekierowanie do strony informującej o sukcesie lub nie
       if @activity.save
         format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
         format.json { render action: 'show', status: :created, location: @activity }
@@ -69,6 +74,7 @@ class ActivitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def activity_params
+      #S mówi, które pola są dozwolone przy przekazywaniu przez formularz
       params.require(:activity).permit(:name, :description)
     end
 end

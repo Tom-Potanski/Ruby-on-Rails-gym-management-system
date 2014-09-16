@@ -7,7 +7,9 @@ module UsersHelper
     image_tag(gravatar_url, alt: user.name, class: "gravatar")
   end
 
+  #S spr. czy uż. ma uprawnienia trenera
   def is_coach(user)
+    #S zwraca ilość trenerów, którzy mają identyczny adr. email jak użytkownik - pownien być tylko jeden
     c = Coach.where(:email => user.email).count
     return (c == 1)
   end

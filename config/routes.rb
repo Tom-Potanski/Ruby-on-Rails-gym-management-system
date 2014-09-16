@@ -1,3 +1,5 @@
+#A: MS
+
 Gocha::Application.routes.draw do
   resources :activity_record3s
 
@@ -5,6 +7,7 @@ Gocha::Application.routes.draw do
 
   resources :models
 
+  # S ścieżka users/new ma się odnosic do kontrolera users i do funkcji new i ma byc powiazana z widokiem new
   get "users/new"
 
   resources :diets
@@ -25,6 +28,7 @@ Gocha::Application.routes.draw do
   # post "activity_record3s/new"
   get "activity_record3s/index"
 
+  # S dopasuje daną ścieżke z kontrolerem#funkcją_w_nim. Ścieżka zostanie wyświelona w dany sposób (get/post)
   match '/showusers', to: 'users#index',          via: 'get'
   match '/add_activity_to_plan', to: 'activity_record3s#new',          via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
