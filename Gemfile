@@ -1,3 +1,14 @@
+
+# Projekt indywidualny,
+# Małgorzata Szwed
+# 2 rok
+# Nr indeksu: 69826
+# Elektroniczny system obsługi siłowni: Twoja siłownia, online
+# 16 września 2014
+
+# Plik został zmodyfikowany/utworzony na cele uczelniane/potrzeby projektu.
+
+
 source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
@@ -6,6 +17,7 @@ gem 'rails', '4.0.8'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
+# gem 'rapi_doc', '~> 0.5.0'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'

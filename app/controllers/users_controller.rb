@@ -1,4 +1,12 @@
 #A: MS
+# Projekt indywidualny,
+# Małgorzata Szwed
+# 2 rok
+# Nr indeksu: 69826
+# Elektroniczny system obsługi siłowni: Twoja siłownia, online
+# 16 września 2014
+#
+# Plik został zmodyfikowany/utworzony na cele uczelniane/potrzeby projektu.
 
 class UsersController < ApplicationController
   def new
@@ -20,7 +28,7 @@ class UsersController < ApplicationController
     # @user = User.new(params[:user])    # Not the final implementation!
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
-      #S kożystamy z funkcji sign_in z helper'ów w celu zalogowoania użytkownika w danej sesji
+      #S korzystamy z funkcji sign_in z helper'ów w celu zalogowania użytkownika w danej sesji
       sign_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user

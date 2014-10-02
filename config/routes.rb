@@ -1,4 +1,12 @@
 #A: MS
+# Projekt indywidualny,
+# Małgorzata Szwed
+# 2 rok
+# Nr indeksu: 69826
+# Elektroniczny system obsługi siłowni: Twoja siłownia, online
+# 16 września 2014
+
+# Plik został zmodyfikowany/utworzony na cele uczelniane/potrzeby projektu.
 
 Gocha::Application.routes.draw do
   resources :activity_record3s
@@ -7,7 +15,7 @@ Gocha::Application.routes.draw do
 
   resources :models
 
-  # S ścieżka users/new ma się odnosic do kontrolera users i do funkcji new i ma byc powiazana z widokiem new
+  # S ścieżka users/new ma się odnosić do kontrolera users i do funkcji new i ma byc powiązana z widokiem new
   get "users/new"
 
   resources :diets
@@ -28,7 +36,7 @@ Gocha::Application.routes.draw do
   # post "activity_record3s/new"
   get "activity_record3s/index"
 
-  # S dopasuje daną ścieżke z kontrolerem#funkcją_w_nim. Ścieżka zostanie wyświelona w dany sposób (get/post)
+  # S dopasuje daną ścieżce z kontrolerem#funkcją_w_nim. Ścieżka zostanie wyścielona w dany sposób (get/post)
   match '/showusers', to: 'users#index',          via: 'get'
   match '/add_activity_to_plan', to: 'activity_record3s#new',          via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'

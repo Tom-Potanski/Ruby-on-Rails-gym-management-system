@@ -1,3 +1,6 @@
+
+
+
 class ActivityRecord2sController < ApplicationController
   before_action :set_activity_record2, only: [:show, :edit, :update, :destroy]
 
