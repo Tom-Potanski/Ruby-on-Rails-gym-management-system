@@ -42,11 +42,12 @@
 
     <% if is_coach(@user) %>
 
-    Gratulacje, jesteś trenerem<ul>
+    Jesteś trenerem.
+    <ul>
     <li><%= link_to "Listuj użytkowników", showusers_path %></li>
     <li><%= link_to "Dodaj zajęcia użytkownikowi", add_activity_to_plan_path %></li>
     </ul>
 
     <% else %>
-        Jesteś zwykłym kursantem, nie trenerem.
+        Jesteś kursantem.
     <% end %>
