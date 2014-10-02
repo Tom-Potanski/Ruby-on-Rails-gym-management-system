@@ -21,7 +21,6 @@
       <th>Zajęcia</th>
       <th></th>
       <th></th>
-      <th></th>
     </tr>
   </thead>
 
@@ -34,7 +33,6 @@
         <td><%= activity_record3.start_time %></td>
         <td><%= activity_record3.activity.name %></td>
         <td><%= link_to 'Pokaż', activity_record3 %></td>
-        <td><%= link_to 'Edytuj', edit_activity_record3_path(activity_record3) %></td>
         <td><%= link_to 'Usuń', activity_record3, method: :delete, data: { confirm: 'Jesteś pewien?' } %></td>
       </tr>
     <% end %>
