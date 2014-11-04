@@ -1,4 +1,9 @@
-Autor: Malgorzata Szwed
+Author: Tomasz Potański
+
+Tiny gym online management system in Ruby on Rails. 
+
+----(more details in polish)----
+
 Nazwa projektu: Elektroniczny system obslugi silowni: Twoja silownia, online
 
 Celem projektu jest stworzenie dynamicznej aplikacji webowej we frameworku Ruby on Rails do obslugi elektronicznego systemu zarzadzania silowni.
