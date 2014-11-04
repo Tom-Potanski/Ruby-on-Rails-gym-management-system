@@ -2,9 +2,15 @@ Author: Tomasz Potański
 
 Tiny gym online management system in Ruby on Rails. Functionality is similar to the application created in: The Ruby on Rails tutorial by Michael Hartl. 
 
+There are two types of users in the system:
+-coaches (could for example: assign physical activities, diets to gym members)
+-gym members (can monitor progress, check actual workout schedule etc.)
+
 Paid project created for my friend: Małgorzata Szwed. 
 
-Language: polish
+Link: https://gym-online.herokuapp.com/
+
+Language: Polish
 
 ----(more details in polish)----
 
