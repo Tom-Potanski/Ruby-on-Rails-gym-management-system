@@ -1,8 +1,9 @@
 Author: Tomasz Potański
 
-Tiny gym online management system in Ruby on Rails. 
+Tiny gym online management system in Ruby on Rails. Functionality is similar to application created in: the rails tutorial. 
 
 Paid project created for my friend: Małgorzata Szwed. 
+
 Language: polish
 
 ----(more details in polish)----
