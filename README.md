@@ -1,6 +1,6 @@
 Author: Tomasz Potański
 
-Tiny gym online management system in Ruby on Rails. Functionality is similar to the application created in: the rails tutorial. 
+Tiny gym online management system in Ruby on Rails. Functionality is similar to the application created in: The Ruby on Rails tutorial by Michael Hartl. 
 
 Paid project created for my friend: Małgorzata Szwed. 
 
