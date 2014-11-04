@@ -1,6 +1,8 @@
 Author: Tomasz Potański
 
 Tiny gym online management system in Ruby on Rails. 
+Paid project created for my friend: Małgorzata Szwed. 
+Language: polish
 
 ----(more details in polish)----
 
