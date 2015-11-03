@@ -1,7 +1,7 @@
 #Tiny gym online management system
 #####Written in Ruby on Rails as a paid project for my friend. 
 
-- **Technologies**: Ruby on Rails, HTML, CSS, LESS, Heroku, JavaScript, jQuery, Twitter Bootstrap
+- **Technologies**: Ruby on Rails, HTML, CSS, LESS, Heroku, JavaScript, jQuery, Twitter Bootstrap, RSpec, Cucumber, Spork
 - **Date**: September, 2014
 - **Link**: https://gym-online.herokuapp.com/
 - **GitHub**: https://github.com/tomasz-potanski/Ruby-on-Rails-gym-management-system
