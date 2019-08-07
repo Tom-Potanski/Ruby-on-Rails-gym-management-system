@@ -3,7 +3,6 @@
 
 - **Technologies**: Ruby on Rails, HTML, CSS, LESS, Heroku, JavaScript, jQuery, Twitter Bootstrap, RSpec, Cucumber, Spork
 - **Date**: September, 2014
-- **Link**: https://gym-online.herokuapp.com/
 - **GitHub**: https://github.com/tomasz-potanski/Ruby-on-Rails-gym-management-system
 
 Author: **Tomasz Potański**
@@ -15,8 +14,6 @@ There are two types of users in the system:
 - gym members (can monitor progress, check actual workout schedule etc.)
 
 Paid project created for my friend: Małgorzata Szwed. 
-
-Link: https://gym-online.herokuapp.com/
 
 Language: Polish
 
